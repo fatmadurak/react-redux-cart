@@ -23,9 +23,13 @@ const dispatch=useDispatch();
         image={item.images}
     
       />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+    <div style={{ display: "flex", alignItems:"center", justifyContent:"space-around" }}>
+    <CardContent>
+        <Typography gutterBottom variant="h4" component="div">
           {item.title}
+        </Typography>
+        <Typography gutterBottom variant="h3" component="div">
+        {item.price.toLocaleString()} TL
         </Typography>
      
       </CardContent>
@@ -42,6 +46,7 @@ const dispatch=useDispatch();
           </Button>
         </div>
       </CardActions>
+    </div>
      
     </Card>
   

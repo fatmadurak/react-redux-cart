@@ -5,6 +5,7 @@ export const cartSlice = createSlice({
     name: "cart",
     initialState: {
         cartItems: data,
+        quantity:0,
     },
     reducers: {
         increment: (state, action) => {
@@ -13,7 +14,10 @@ export const cartSlice = createSlice({
 
             if (item) {
                 item.quantity += 1;
+                state.quantity=item.quantity
             }
+
+            state.quantity=item.quantity
         },
         decrement: (state, action) => {
             const { itemId } = action.payload;
@@ -21,7 +25,10 @@ export const cartSlice = createSlice({
 
             if (item && item.quantity > 1) {
                 item.quantity -= 1;
+                state.quantity=item.quantity
+                
             }
+           
         },
     },
 });
