@@ -7,7 +7,14 @@ import Button from '@mui/material/Button';
 import CardActions from '@mui/material/CardActions';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { useDispatch } from "react-redux";
+import { increment,decrement } from "./redux/CartSlice";
+
 function Cart({ item }) {
+
+const dispatch=useDispatch();
+
+
   return <>
 
 <Card >
@@ -23,9 +30,17 @@ function Cart({ item }) {
      
       </CardContent>
       <CardActions>
-        <Button size="small" variant="contained">     <KeyboardArrowUpIcon /></Button>
-        <Button size="small"variant="contained">    <KeyboardArrowDownIcon />
-</Button>
+      <div style={{ display: "flex",flexDirection:"column", alignItems:"center" }}>
+          <Button size="small" variant="contained" onClick={()=>dispatch(increment({ itemId: item.id }))}>
+            <KeyboardArrowUpIcon />
+          </Button>
+          <Typography gutterBottom variant="h5" component="div">
+            {item.quantity}
+          </Typography>
+          <Button size="small" variant="contained" onClick={()=>dispatch(decrement({ itemId: item.id }))}>
+            <KeyboardArrowDownIcon />
+          </Button>
+        </div>
       </CardActions>
      
     </Card>
