@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
 
-function Cart() {
-  return (
-    <div>Cart</div>
-  )
+function Cart({ item }) {
+  return <>
+
+    <img src={item.images} />
+  
+  
+  
+  </>;
 }
 
-export default Cart
+export default Cart;

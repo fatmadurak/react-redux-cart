@@ -1,31 +1,23 @@
 import { createSlice } from "@reduxjs/toolkit";
-import {data} from "../data"
+import  {data}  from "../data"; 
 
-
-export const cartSlice=createSlice({
-
-    name:"cart",
-    initialState:{
-  
-        quantitiy:1,
-        cartItems:{data},
-        total:0,
-     
-
+export const cartSlice = createSlice({
+    name: "cart",
+    initialState: {
+        quantity: 1,
+        cartItems: data,
+        total: 0,
     },
-    reducers:{
+    reducers: {
+        increment: (state) => {
+            state.quantity += 1;
+        },
+        decrement: (state) => {
+            state.quantity -= 1;
+        },
+    },
+});
 
-    
-
-
-
-    }
-
-
-
-
-
-})
-
-export default cartSlice.reducer
+export const { increment, decrement } = cartSlice.actions;
+export default cartSlice.reducer;
 
