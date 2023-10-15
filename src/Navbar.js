@@ -16,8 +16,8 @@ function Navbar() {
                         <Typography variant="h3" color={"primary"}>Cart App</Typography>
                     </li>
                     <li>
-                        <div style={{ display: 'flex', alignItems: 'center' }}>
-                            <Typography variant="body1" style={{ marginRight: '8px' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', position:"relative" }}>
+                            <Typography variant="h5" style={{ marginRight: '5px', position:"absolute", right:"-10px", top:"-20px",background:"orange", borderRadius:"100%",width:"1rem"}}>
                                 {quantity}
                             </Typography>
                             <BsFillBasketFill size={40} color="blue" />

@@ -11,21 +11,24 @@ export const cartSlice = createSlice({
         increment: (state, action) => {
             const { itemId } = action.payload;
             const item = state.cartItems.find((item) => item.id === itemId);
-
+        
             if (item) {
                 item.quantity += 1;
                 state.quantity=item.quantity
+               
             }
-
-            state.quantity=item.quantity
+      
+           
         },
         decrement: (state, action) => {
             const { itemId } = action.payload;
             const item = state.cartItems.find((item) => item.id === itemId);
-
+          
             if (item && item.quantity > 1) {
                 item.quantity -= 1;
                 state.quantity=item.quantity
+              
+            
                 
             }
            
