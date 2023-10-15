@@ -1,12 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
-import  {data}  from "../data"; 
+import data from "../data";
 
 export const cartSlice = createSlice({
     name: "cart",
     initialState: {
         quantity: 1,
-        cartItems: data,
         total: 0,
+        cartItems:data,
     },
     reducers: {
         increment: (state) => {
@@ -18,6 +18,8 @@ export const cartSlice = createSlice({
     },
 });
 
-export const { increment, decrement } = cartSlice.actions;
+
 export default cartSlice.reducer;
+export const { increment, decrement } = cartSlice.actions;
+
 
