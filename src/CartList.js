@@ -6,9 +6,11 @@ import Cart from "./Cart";
 import Typography from "@mui/material/Typography";
 import Button from '@mui/material/Button';
 import { deleteItems } from "./redux/CartSlice";
+
 function CartList() {
   const { cartItems, total } = useSelector((state) => state.cart);
-  const dispatch=useDispatch()
+  const dispatch = useDispatch();
+
   return (
     <Container maxWidth="xl">
       <Grid container spacing={2}>
@@ -25,11 +27,11 @@ function CartList() {
             </Typography>
           </Grid>
         )}
-        <Grid item xs={12} >
+        <Grid item xs={12}>
           <Typography gutterBottom variant="h4" component="div" style={{ textAlign: 'center' }}>
             TOTAL PRICE: {total}
           </Typography>
-          <Button variant="contained" color="primary" style={{ padding: '10px 20px'}}  onClick={dispatch(deleteItems())}>
+          <Button variant="contained" color="primary" style={{ padding: '10px 20px' }} onClick={() => dispatch(deleteItems())}>
             Tümünü Sil
           </Button>
         </Grid>
