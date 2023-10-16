@@ -13,11 +13,11 @@ function Navbar() {
             <Paper elevation={3} style={{ padding: '20px' }}>
                 <ul className='cartList' style={{ listStyle: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: 0 }}>
                     <li>
-                        <Typography variant="h3" color={"primary"}>Cart App</Typography>
+                        <Typography variant="h3" color="primary">Cart Uygulaması</Typography>
                     </li>
                     <li>
-                        <div style={{ display: 'flex', alignItems: 'center', position:"relative" }}>
-                            <Typography variant="h5" style={{ marginRight: '5px', position:"absolute", right:"-10px", top:"-20px",background:"orange", borderRadius:"100%",width:"1rem"}}>
+                        <div style={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
+                            <Typography variant="h5" style={{ marginRight: '5px', position: 'absolute', right: '-25px', top: '-25px', background: 'orange', borderRadius: '100%', width: '2rem' }}>
                                 {quantity}
                             </Typography>
                             <BsFillBasketFill size={40} color="blue" />
