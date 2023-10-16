@@ -17,7 +17,7 @@ function Navbar() {
                     </li>
                     <li>
                         <div style={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
-                            <Typography variant="h5" style={{ marginRight: '5px', position: 'absolute', right: '-25px', top: '-25px', background: 'orange', borderRadius: '100%', width: '2rem' }}>
+                            <Typography variant="h5" style={{ marginRight: '5px', position: 'absolute', right: '-25px', top: '-25px', background: 'orange', borderRadius: '100%', width: '2rem',textAlign:'center' }}>
                                 {quantity}
                             </Typography>
                             <BsFillBasketFill size={40} color="blue" />
