@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import data from "../data";
+import { act } from "react-dom/test-utils";
 
 export const cartSlice = createSlice({
   name: "cart",
@@ -46,8 +47,15 @@ export const cartSlice = createSlice({
     
       },
 
+    deleteCart:(state,action)=>{
+     let itemId=action.payload;
+     state.cartItems= state.cartItems.filter((item)=>item.id!==itemId)
+
+
+    },
+
   },
 });
 
 export default cartSlice.reducer;
-export const { increment, decrement, calculateTotal,deleteItems } = cartSlice.actions;
+export const { increment, decrement, calculateTotal,deleteItems,deleteCart } = cartSlice.actions;

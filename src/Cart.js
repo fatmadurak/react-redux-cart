@@ -9,6 +9,7 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { useDispatch } from "react-redux";
 import { increment, decrement } from "./redux/CartSlice";
+import { deleteCart } from "./redux/CartSlice";
 
 function Cart({ item }) {
   const dispatch = useDispatch();
@@ -41,6 +42,10 @@ function Cart({ item }) {
             </Button>
           </div>
         </CardActions>
+        <Button variant="contained" color="primary" style={{ padding: '10px 20px' }} onClick={() => dispatch(deleteCart(item.id))}>
+             Sil
+          </Button>
+
       </div>
     </Card>
   );
